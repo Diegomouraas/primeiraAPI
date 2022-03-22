@@ -4,13 +4,8 @@ const mongoose = require('mongoose')
 require ('../models/Users')
 const Usuarios = mongoose.model('usuarios');
 
-// get
-    router.get('/', (req, res) => {
-        console.log("lala")
-        res.render('index')
-    })
-
 // posts   
+    // Registro de Usuario
     router.post('/users/newreg', (req, res) => {
         console.log(req.body.cpf[1])
         var erros = []; // array que armazena os erros
@@ -124,6 +119,9 @@ const Usuarios = mongoose.model('usuarios');
             }
             
     })
+
+
+    //
 
 
 

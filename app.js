@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session')
 const mongoose = require('mongoose');
 const reqIn = require('./routes/in');
+const reqPag = require('./routes/pages')
 
 const app = express();
 
@@ -31,6 +32,7 @@ const app = express();
 
 // Rotas
     app.use('/in', reqIn);
+    app.use('/', reqPag);
 
 // Outros
     const port = 8081;
